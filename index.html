@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/954/954591.png">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/2954/2954659.png">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
@@ -114,24 +114,24 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">FFAA: Face Forgery Analysis Assistant</h1>
+            <h1 class="title is-1 publication-title">FFAA: <b>F</b>ace <b>F</b>orgery <b>A</b>nalysis <b>A</b>ssistant</h1>
             <h3 class="title is-3 publication-title">Multimodal Large Language Model based Explainable Open-World <br> Face Forgery Analysis Assistant</h3>
             <!-- <h5 class="subtitle is-5 publication-awards">NeurIPS 2023 (Oral)</h5> -->
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://hliu.cc/">Zhengchao Huang</a>,
+                <a href="https://github.com/thu-huangzc">Zhengchao Huang</a>,
               </span>
               <span class="author-block">
-                <a href="https://chunyuan.li/">Bin Xia</a>,
+                <a href="https://github.com/Zj-BinXia">Bin Xia</a>,
               </span>
               <span class="author-block">
-                <a href="https://qywu.github.io/about.html">Zicheng Lin</a>,
+                <a href="https://github.com/chenzhiling9954">Zicheng Lin</a>,
               </span>
               <span class="author-block">
-                <a href="https://pages.cs.wisc.edu/~yongjaelee/">Zhun Mou</a>,
+                <a>Zhun Mou</a>,
               </span>
               <span class="author-block">
-                <a href="https://pages.cs.wisc.edu/~yongjaelee/">Wenming Yang</a>
+                <a href="https://www.sigs.tsinghua.edu.cn/ywm/main.htm">Wenming Yang</a>
               </span>
             </div>
 
@@ -194,6 +194,9 @@
 
               </div>
             </div>
+            <div style="text-align: center; margin-top: 1em;">
+                <img id="" width="95%" src="static/images/example.png">     
+               </div>
           </div>
         </div>
       </div>
@@ -221,11 +224,10 @@
                 <li><b>Performance</b>. <span style="font-size: 95%;">FFAA not only provides user-friendly explainable results but also achieves state-of-the-art generalization performance on the OW-FFA-Bench with an ACC of <b>86.5%</b> and an AUC of <b>94.4%</b>, and demonstrates excellent robustness.</li>
               </ol>  
            </p>
-  
           </div>
         </div>
       </div>
-        
+      
     </div>
   </section>
 
@@ -234,17 +236,22 @@
 <section class="section">
     <div class="columns is-centered has-text-centered">
         <div class="column is-six-fifths">
-        <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/512/9073/9073592.png"> Face Forgery Analysis VQA Data</h2>
+        <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/128/7733/7733518.png"> Face Forgery Analysis VQA Data</h2>
         </div>
     </div>
     <div class="container is-max-desktop">
-
+    
+    <div style="text-align: center;">
+        <img id="dataset_pipeline" width="70%" src="static/images/dataset_pipeline.png">     
+    </div>
     <div class="columns is-centered">
         <div class="column is-full-width">
         <div class="content has-text-justified">
             <p>
-            Based on the COCO dataset, we interact with language-only GPT-4, and collect 158K unique language-image instruction-following samples in total, including 58K in conversations, 23K in detailed description, and 77k in complex reasoning, respectively. Please check out ``LLaVA-Instruct-150K''' on 
-            <a href="https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K">[HuggingFace Dataset]</a>.
+            We utilize <a href="https://github.com/ondyari/FaceForensics">FF++</a>, <a href="https://github.com/yuezunli/celeb-deepfakeforensics">Celeb-DF-v2</a>, <a href="https://cvlab.cse.msu.edu/dffd-dataset.html">DFFD</a> (FFHQ, FaceApp, StyleGAN) and <a href="https://github.com/PietroMelzi/GANDiffFace">GanDiffFace</a> as our source datasets since they encompass diverse forgery techniques and enriched facial characteristics.
+            Subsequently, we construct the Multi-attack (MA) dataset, comprising <b>95K</b> images with diverse facial features and various types of forgeries.
+            Then, we employ GPT-4o to generate face forgery analysis processes.
+            Finally, experts scrutinize the analysis process and the qualified responses are organized into a VQA format, resulting in <b>20K</b> high-quality face forgery analysis VQA data.
     <!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->
     <style>
     table.GeneratedTable {
@@ -293,11 +300,8 @@
             </tbody>
         </table>
     </div>
+    <!-- <div style="height: 1em;"></div> -->
 
-    <div class="columns is-centered">
-        <div class="column is-full-width">
-        <div class="content has-text-justified">
-            <p> Coming soon...
 
 
 </section>
@@ -307,7 +311,7 @@
   <!-- Results. -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/512/5379/5379860.png"> FFAA: Face Forgery Analysis Assistant</h2>
+      <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/512/2954/2954659.png"> FFAA: Face Forgery Analysis Assistant</h2>
     </div>
   </div>
   <!-- </div> -->
@@ -317,24 +321,18 @@
   <div class="columns is-centered">
     <div class="column is-full-width">
       <div class="content has-text-justified"> 
+        <div style="text-align: center;">
+            <img id="ffaa" width="70%" src="static/images/ffaa_arch.png">     
+          </div>
         <p>
-          LLaVa connects pre-trained <a href="https://openai.com/research/clip">CLIP ViT-L/14</a> visual encoder and large language model <a href="https://github.com/lm-sys/FastChat">Vicuna</a>, using a simple projection matrix.   We consider a two-stage instruction-tuning procedure:
+          FFAA primarily consists of two modules: a fine-tuned Multimodal Large Language Model (MLLM) and Multi-answer Intelligent Decision System (MIDS). MIDS is proposed to select the answer that best matches the image's authenticity, mitigating the impact of fuzzy classification boundaries between real and forged faces, thereby enhancing model's robustness. We consider a two-stage training procedure:
           <ul type="1">
-            <li><b>Stage 1: Pre-training for Feature Alignment</b>. <span style="font-size: 95%;">Only the projection matrix is updated, based on a subset of CC3M.</span></li>
-            <li><b>Stage 2: Fine-tuning End-to-End</b>. <span style="font-size: 95%;">Both the projection matrix and LLM are updated for two different use senarios: 
-              <ul type="1">
-                <li> <b>Visual Chat</b>: LLaVA is fine-tuned on our generated multimodal instruction-following data for daily user-oriented applications. 
-                <li> <b>Science QA</b>: LLaVA is fine-tuned on this multimodal reasonsing dataset for the science domain.</span></li>
-              </ul>  
+            <li><b>Stage 1: Fine-tune MLLM with Hypothetical Prompts</b>. <span style="font-size: 95%;">We introduce hypothetical prompts to the FFA-VQA dataset that presume the face is either real or fake prior to analysis. By fine-tuning the MLLM on this dataset, we enable the generation of answers based on varying hypotheses.</span></li>
+            <li><b>Stage 2: Train MIDS with Historical Answers</b>. <span style="font-size: 95%;">Utilize the fine-tuned MLLM to extract answers from unused samples in the MA dataset for training. </span></li>
           </ul>  
-          Please check out our 
-          <a href="https://github.com/haotian-liu/LLaVA/blob/main/docs/MODEL_ZOO.md">[Model Zoo]</a>.
         </p>
       </div>
       <centering>
-        <div style="text-align: center;">
-          <img id="teaser" width="70%" src="images/llava_arch.png">     
-        </div>
 
       
       </centering>           
@@ -350,7 +348,7 @@
   <!-- Results. -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/512/3515/3515174.png"> Performance</h2>
+      <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/128/9716/9716194.png"> Performance</h2>
     </div>
   </div>
 
@@ -364,27 +362,24 @@
   <!-- Grounedtext2img. -->
   <div class="columns is-centered">
     <div class="column is-full-width">
-      <h2 class="title is-4"><img id="painting_icon" width="4%" src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png"> <span style="font-size: 100%;">Visual Chat:</span> Towards building multimodal GPT-4 level chatbot  </h2>
+      <h2 class="title is-4"><img id="painting_icon" width="4%" src="https://cdn-icons-png.flaticon.com/512/9733/9733346.png"> <span style="font-size: 100%;">OW-FFA-Bench:</span> Open-World Face Forgery Analysis Benchmark  </h2>
       
-      <div>
-        <a href="https://plotly.com/~lichunyuan24/5/?share_key=d78QObaCAYCIy8PJpe3gd1" target="_blank" title="llava_gpt4_pie" style="display: block; text-align: center;">  <img id="painting_icon" width="90%" src="images/pie_llava_gpt4.png"> </a>
+      <div style="text-align: center;">
+        <img id="dataset_pipeline" width="80%" src="static/images/performancev1.png">     
+      </div>
 
-    </div>
-
-    <p style="font-family:Times New Roman"><b>An evaluation dataset with 30 unseen images is constructed: each image is assocaited with three types of instructions: conversation, detailed description and complex reasoning. This leads to 90 new language-image instructions, on which we test LLaVA and GPT-4, and use GPT-4 to rate their responses from score 1 to 10. The summed score and relative score per type is reported. Overall, LLaVA achieves 85.1% relative score compared with GPT-4, indicating the effectinvess of the proposed self-instruct method in multimodal settings</b>               
+    <p style="font-family:Times New Roman;"><b>We create the generalization test sets of the OW-FFA-Bench by randomly collecting face images from the public datasets: <a href="https://github.com/EndlessSora/DeeperForensics-1.0">Deeperforensics</a> (DPF), <a href="https://research.google/blog/contributing-data-to-deepfake-detection-research/">DeepFakeDetection</a> (DFD), <a href="https://www.kaggle.com/c/deepfake-detection-challenge/data">DFDC</a>, <a href="https://github.com/tkarras/progressive_growing_of_gans">PGGAN</a>, <a href="https://www.kaggle.com/datasets/badasstechie/celebahq-resized-256x256">Celeb-A</a>, <a href="https://whichfaceisreal.com/index.php">WhichFaceIsReal</a> (WFIR) and <a href="https://www.kaggle.com/competitions/multi-ffdi/data">MultiFFDI</a> (MFFDI). The images are then divided into six generalization test sets based on their source, with each containing 1K images and differing in distribution. FFAA achieves state-of-the-art generalization performance on the OW-FFA-Bench with an ACC of <b>86.5%</b> and an AUC of <b>94.4%</b>, and demonstrates excellent robustness with an sACC of 10.0%</b>               
     </div>
   </div>
 
   <!-- Grounedtext2img. -->
   <div class="columns is-centered">
     <div class="column is-full-width">
-      <h2 class="title is-4"> <img id="painting_icon" width="3%" src="https://scienceqa.github.io/img/logo.png"><span style="font-size: 100%;"> Science QA:</span> New SoTA with the synergy of LLaVA with GPT-4</h2>
-      
-      <div>
-        <a href="https://plotly.com/~lichunyuan24/1/?share_key=v4opE3TJpxqQ08RYsDD4iv" target="_blank" title="Plot 1" style="display: block; text-align: center;"><img id="painting_icon" width="65%" src="images/bar_llava_gpt4_scienceqa.png"></a>
-        <script data-plotly="lichunyuan24:1" sharekey-plotly="v4opE3TJpxqQ08RYsDD4iv" src="https://plotly.com/embed.js" async></script>
-    </div>
-        <p style="font-family:Times New Roman"><b>LLaVA alones achieve 90.92%. We use the text-only GPT-4 as the judge, to predict the final answer based on its own previous answers and the LLaVA answers. This "GPT-4 as judge" scheme yields a new SOTA 92.53%.</b>
+      <h2 class="title is-4"> <img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/512/6231/6231228.png"><span style="font-size: 100%;"> Comparison with Advanced MLLMs</h2>
+      <div style="text-align: center;">
+        <img id="dataset_pipeline" width="85%" src="static/images/comparison_with_mllms.png">     
+      </div>
+        <p style="font-family:Times New Roman"><b>Judgment results are indicated in parentheses as (<em>'Real'</em>, <em>'Fake'</em>, <em>'Refuse to judge'</em>), with <b style="color: #4eac5b;">green</b> for correct judgments and <b style="color: #eb3324;">red</b> for incorrect ones. These advanced MLLMs exhibit strong image understanding capabilities but often struggle to determine face authenticity, sometimes avoiding definitive conclusions. In contrast, our method not only understands the image but also conducts a reasoned analysis of authenticity from various perspectives.</b>
               
     </div>
   </div>
@@ -400,13 +395,6 @@
       <h2 class="title is-3"> Examples on Explainable Face Forgery Analysis</h2>
     </div>
   </div>
-
-    <div class="columns is-centered has-text-centered">
-    <div class="column is-six-fifths">
-      <img id="teaser" width="35%" src="images/cmp_ironing.png">
-      <img id="teaser" width="38%" src="images/cmp_chicken_nugget.png">
-    </div>
-    </div>  
 
 
   <div class="container mt-5">
@@ -464,7 +452,7 @@
       span.className = "icon is-large";
 
       var icon = document.createElement("i");
-      icon.className = "fas fas fa-2x" + (sender === "User" ? " fa-user " : sender === "LLaVA" ? " fa-robot" : "");
+      icon.className = "fas fas fa-2x" + (sender === "User" ? " fa-user " : sender === "FFAA" ? " fa-robot" : "");
 
       var media = document.createElement("div");
       media.className = "media-content";
@@ -522,78 +510,31 @@
     // 
     const conversations = [
       {
-        "description": "monalisa",
+        "description": "dfdc_fake",
         "turns": [
           // ["Description", "Please read the description and answer the question."],
-          ["User", "", "/static/images/monalisa.jpg"],
-          ["User", "Do you know who drew this painting?​"],
-          ["LLaVA",
-            "The painting depicts a woman, commonly believed to be Mona Lisa, the famous artwork by Leonardo da Vinci. " +
-            "It is a portrait painting that showcases the woman's enigmatic smile and has become one of the most famous and iconic art pieces in the world. " +
-            "The original work is displayed in the Louvre Museum in Paris, and it is known for its intricate details, use of oil paint, and the artist's innovative techniques that contributed to its enduring appeal and mystery.​​"
+          ["User", "", "static/images/fake_c23_dfd5.png"],
+          ["User", "In this photograph, a human face is shown. Is it natural or manipulated? What leads you to this judgement?​"],
+          ["FFAA", 
+            "Image description: The image shows a close-up of a human face with long dark hair. The lighting appears to be even, and the resolution is moderate. The face is oriented slightly to the left. The individual appears to be an adult female with light to medium skin tone. The expression is neutral, with slightly parted lips. There are no visible face decorations.\n" + 
+            "Forgery reasoning: Upon close examination, there are several abnormalities in the facial features. The area around the mouth appears unnatural and slightly blurred, suggesting possible manipulation. The skin texture around the mouth does not match the rest of the face, indicating inconsistency. Additionally, the lips seem to lack natural definition and shadowing, which is often a sign of digital alteration. The eyes and other facial features appear normal, but the overall integration of the face with the surrounding hair and background seems slightly off, suggesting that the face might have been altered or replaced.\n" + 
+            "Analysis result: fake, Forgery type: Identity exchange\n" +
+            "Match score: 0.7812; Difficulty: hard",
+            "static/images/fake_c23_dfd5_result.png"
           ]
         ]
       },
       {
-        "description": "monalisa with dog head",
+        "description": "dfd_real_c40",
         "turns": [
-          ["User", "", "/static/images/monalisa-fun.jpg"],
-          ["User", "Do you know who drew this painting?​"],
-          ["LLaVA", "The painting depicts a dog in a humorous situation, where it appears to be wearing a woman's dress and standing in front of a landscape. Although the artist of the painting is not explicitly identified, it could be a reference to the famous artist Da Vinci, known for his artistic works, including the Mona Lisa. The painting is likely a creative and comical take on the traditional portrait style, replacing a human figure with a dog dressed in a woman's clothing, making it an interesting and amusing visual piece.​"]
-        ]
-      },
-      {
-        "description": "Titanic Rose and Jack",
-        "turns": [
-          ["User", "", "/static/images/titanic.jpg"],
-          ["User", "What's the ending of this movie?​​"],
-          ["LLaVA", "​In the image, a young woman is leaning on a man in front of a beautiful sunset, with both of them standing on a boat. They appear to be enjoying a romantic moment together. The scene suggests that they could be depicted as the characters Jack and Rose from the popular movie Titanic. In the movie, their romance blossoms aboard the fictional ocean liner Titanic, with the pair ultimately sharing a passionate kiss as the ship sinks into the ocean. The ending of the movie is known for its emotional and heartfelt scenes, where the characters are forced to say goodbye to each other as they are separated by the sinking ship. The image evokes a sense of romance and nostalgia, paying tribute to the iconic love story portrayed in the movie Titanic.​"]
-        ]
-      },
-      {
-        "description": "Fridge",
-        "turns": [
-          ["User", "", "/static/images/fridge.jpg"],
-          ["User", "What are the meals that I can cook with these?​​"],
-          ["LLaVA", "With the variety of food items stored in the refrigerator, you can prepare several meals. For example, you can create a fruit salad using the strawberries, blueberries, and carrots. Additionally, you can make a delicious smoothie using the fruits and vegetables, which would be a healthy and nutritious snack or breakfast option. The milk and eggs can be used to create various dishes, such as a milk-based smoothie, a baked casserole, or scrambled eggs. The juice can also be used to make a fresh fruit and juice mix or as a refreshing homemade popsicle. The possibilities are vast, and the meals you can create will depend on your preferences and dietary needs.​​"],
-          ["User", "I would like to do the fruit salad.  Show me the recipe.​"],
-          ["LLaVA",
-            `Certainly! Here's a simple fruit salad recipe using the items in your refrigerator:​
-
-Ingredients:​
-- 2 cups fresh strawberries, sliced​
-- 1 cup fresh blueberries​
-- 1 large carrot, grated​
-- Juice of half a lemon​
-- A handful of chopped fresh parsley or mint​
-- A few ice cubes​
-- Optional: honey or maple syrup (adjust to taste)​
-
-Instructions:​
-1. In a large bowl, combine the sliced strawberries, blueberries, and carrot. Gently toss them together to mix.​
-2. Drizzle the juice of half a lemon over the fruit and vegetables to prevent them from oxidizing and add a refreshing citrus flavor.​
-3. Sprinkle the chopped fresh parsley or mint over the fruit and gently toss once more.​
-4. If desired, add a drizzle of honey or maple syrup for a touch of sweetness. Adjust the amount according to your taste preferences.​
-5. Cover the bowl and refrigerate the fruit salad for at least 30 minutes or up to a few hours. This allows the flavors to meld and creates a more refreshing salad.​
-6. Serve the fruit salad in cups or bowls, garnished with a sprinkle of fresh parsley or mint, if desired.​
-
-This fruit salad recipe is perfect for a healthy snack or side dish, and with the variety of ingredients available in your refrigerator, it should be easy to put together quickly.`]]
-      },
-      {
-        "description": "Beautiful View",
-        "turns": [
-          ["User", "", "/static/images/view.jpg"],
-          ["User", "What are the things I should be cautious about when I visit here?​​"],
-          ["LLaVA", "When visiting this peaceful location with a pier extending over a serene lake, surrounded by mountains, there are several things to be cautious about. First, pay attention to the weather conditions, as sudden changes in weather, especially strong winds or storms, can cause the water to become rough and pose risks to the stability of the pier. Second, be mindful of the structural integrity of the pier; avoid overloading it with too many people or excessive weight, as this could potentially damage the pier or cause it to collapse. Additionally, be aware of the surrounding wildlife and respect their space; do not harm or disturb them in any way. Finally, if you decide to go fishing, ensure that you adhere to any local fishing regulations and use appropriate fishing techniques to keep the lake ecosystem healthy and maintain the balance of the food chain.​​"],
-          ["User", "Compose an engaging travel blog post about my trip to this place, highlighting the beautiful sceneries, joyful experiences, and include possible anecdotes.​​"],
-          ["LLaVA",
-            `Traveling to this picturesque location with a serene lake and mountains in the background was a refreshing and rejuvenating experience. The pier extending over the calm water provided an excellent vantage point from which to appreciate the breathtaking scenery. As I stood on the pier, I couldn't help but feel a deep connection with nature, taking a moment to soak in the peaceful atmosphere.​
-
-One of the highlights of my trip was undoubtedly the fishing experience. The area is teeming with life, and I was thrilled to land a sizeable catch, despite the modest size of the lake. The joy of fishing in such a beautiful setting was truly rewarding, and it allowed me to take a break from my busy life and truly immerse myself in the tranquility of nature.​
-
-While exploring the surrounding area, I came across a family of birds that had built a nest close to the pier, adding to the charm of the location. Interacting with the wildlife and observing their behavior was an enriching experience that I'll cherish for years to come.​
-
-In conclusion, this idyllic destination provided me with an opportunity to unwind and recharge, surrounded by mesmerizing natural beauty and the gentle sounds of water and wildlife. If you're looking for a serene escape from the hustle and bustle of everyday life, this pier overlooking the lake is the perfect place to find solace and reconnect with nature.`
+          ["User", "", "static/images/real_c40_dfd1.png"],
+          ["User", "We see a human face in this image. Is it an actual photo or a fabrication? What leads you to that conclusion?​"],
+          ["FFAA", 
+            "Image description: The image shows a close-up of a male face with medium to dark skin tone. The lighting appears to be even, and the resolution is relatively low, resulting in some pixelation. The face is oriented slightly to the left, with visible facial features including eyes, eyebrows, nose, and mouth. The expression appears to be neutral or slightly serious. There are no visible face decorations.\n" + 
+            "Forgery reasoning: The facial features, such as the eyes, eyebrows, nose, and mouth, appear to be naturally integrated with the rest of the face. There are no visible abnormalities or inconsistencies in the facial organs. The skin texture, despite the low resolution, does not show signs of being overly smooth or blurred, which are common indicators of face synthesis. There are no noticeable fusion artifacts or inconsistent skin colors at the boundaries of the face. The hair and surrounding environment also appear to be naturally integrated with the face. There are no signs of facial attribute manipulation such as unnatural changes in expression, color, or texture.\n" + 
+            "Analysis result: real, Forgery type: None\n" +
+            "Match score: 0.9710; Difficulty: hard",
+            "static/images/real_c40_dfd1_result.png"
           ]
         ]
       },
