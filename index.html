@@ -510,16 +510,17 @@
     // 
     const conversations = [
       {
-        "description": "dfdc_fake",
+        "description": "dfd_fake",
         "turns": [
           // ["Description", "Please read the description and answer the question."],
-          ["User", "", "static/images/fake_c23_dfd5.png"],
+          ["User", "(Ground Truth: Fake; Source: DeepFakeDetection_c23)", "static/images/fake_c23_dfd5.png"],
           ["User", "In this photograph, a human face is shown. Is it natural or manipulated? What leads you to this judgement?​"],
           ["FFAA", 
             "Image description: The image shows a close-up of a human face with long dark hair. The lighting appears to be even, and the resolution is moderate. The face is oriented slightly to the left. The individual appears to be an adult female with light to medium skin tone. The expression is neutral, with slightly parted lips. There are no visible face decorations.\n" + 
             "Forgery reasoning: Upon close examination, there are several abnormalities in the facial features. The area around the mouth appears unnatural and slightly blurred, suggesting possible manipulation. The skin texture around the mouth does not match the rest of the face, indicating inconsistency. Additionally, the lips seem to lack natural definition and shadowing, which is often a sign of digital alteration. The eyes and other facial features appear normal, but the overall integration of the face with the surrounding hair and background seems slightly off, suggesting that the face might have been altered or replaced.\n" + 
             "Analysis result: fake, Forgery type: Identity exchange\n" +
-            "Match score: 0.7812; Difficulty: hard",
+            "Match score: 0.7812; Difficulty: hard\n" + 
+            "(The heatmap reveals visual authenticity clues in the face image corresponding to the 'Analysis result'.)",
             "static/images/fake_c23_dfd5_result.png"
           ]
         ]
@@ -527,13 +528,14 @@
       {
         "description": "dfd_real_c40",
         "turns": [
-          ["User", "", "static/images/real_c40_dfd1.png"],
+          ["User", "(Ground Truth: Real; Source: DeepFakeDetection_c40)", "static/images/real_c40_dfd1.png"],
           ["User", "We see a human face in this image. Is it an actual photo or a fabrication? What leads you to that conclusion?​"],
           ["FFAA", 
             "Image description: The image shows a close-up of a male face with medium to dark skin tone. The lighting appears to be even, and the resolution is relatively low, resulting in some pixelation. The face is oriented slightly to the left, with visible facial features including eyes, eyebrows, nose, and mouth. The expression appears to be neutral or slightly serious. There are no visible face decorations.\n" + 
             "Forgery reasoning: The facial features, such as the eyes, eyebrows, nose, and mouth, appear to be naturally integrated with the rest of the face. There are no visible abnormalities or inconsistencies in the facial organs. The skin texture, despite the low resolution, does not show signs of being overly smooth or blurred, which are common indicators of face synthesis. There are no noticeable fusion artifacts or inconsistent skin colors at the boundaries of the face. The hair and surrounding environment also appear to be naturally integrated with the face. There are no signs of facial attribute manipulation such as unnatural changes in expression, color, or texture.\n" + 
             "Analysis result: real, Forgery type: None\n" +
-            "Match score: 0.9710; Difficulty: hard",
+            "Match score: 0.9710; Difficulty: hard\n" +
+            "(The heatmap reveals visual authenticity clues in the face image corresponding to the 'Analysis result'.)",
             "static/images/real_c40_dfd1_result.png"
           ]
         ]
