@@ -147,7 +147,7 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2311.16500" target="_blank"
+                  <a href="https://arxiv.org/submit/5796459/view" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -300,7 +300,10 @@
             </tbody>
         </table>
     </div>
-    <!-- <div style="height: 1em;"></div> -->
+    <div style="height: 1em;"></div>
+    <div style="text-align: center;">
+      <img id="dataset_pipeline" width="98%" src="static/images/dataset.png">     
+    </div>
 
 
 
@@ -375,11 +378,23 @@
   <!-- Grounedtext2img. -->
   <div class="columns is-centered">
     <div class="column is-full-width">
-      <h2 class="title is-4"> <img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/512/6231/6231228.png"><span style="font-size: 100%;"> Comparison with Advanced MLLMs</h2>
+      <h2 class="title is-4"> <img id="painting_icon" width="4%" src="https://cdn-icons-png.flaticon.com/512/6231/6231228.png"><span style="font-size: 100%;"> Comparison with Advanced MLLMs</h2>
       <div style="text-align: center;">
         <img id="dataset_pipeline" width="85%" src="static/images/comparison_with_mllms.png">     
       </div>
-        <p style="font-family:Times New Roman"><b>Judgment results are indicated in parentheses as (<em>'Real'</em>, <em>'Fake'</em>, <em>'Refuse to judge'</em>), with <b style="color: #4eac5b;">green</b> for correct judgments and <b style="color: #eb3324;">red</b> for incorrect ones. These advanced MLLMs exhibit strong image understanding capabilities but often struggle to determine face authenticity, sometimes avoiding definitive conclusions. In contrast, our method not only understands the image but also conducts a reasoned analysis of authenticity from various perspectives.</b>
+        <p style="font-family:Times New Roman"><b>We compare FFAA with advanced MLLMs in face forgery analysis, including <a href="https://huggingface.co/spaces/liuhaotian/LLaVA-1.6">LLaVA-v1.6-34b</a> and <a href="https://chatgpt.com/">GPT-4o</a>. Judgment results are indicated in parentheses as (<em>'Real'</em>, <em>'Fake'</em>, <em>'Refuse to judge'</em>), with <b style="color: #4eac5b;">green</b> for correct judgments and <b style="color: #eb3324;">red</b> for incorrect ones. These advanced MLLMs exhibit strong image understanding capabilities but often struggle to determine face authenticity, sometimes avoiding definitive conclusions. In contrast, our method not only understands the image but also conducts a reasoned analysis of authenticity from various perspectives.</b>
+              
+    </div>
+  </div>
+
+  <!-- Grounedtext2img. -->
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h2 class="title is-4"> <img id="painting_icon" width="4%" src="https://cdn-icons-png.flaticon.com/512/2362/2362325.png"><span style="font-size: 100%;"> Enhanced interpretability across diverse forgery techniques</h2>
+      <div style="text-align: center;">
+        <img id="dataset_pipeline" width="85%" src="static/images/heatmaps.png">     
+      </div>
+        <p style="font-family:Times New Roman"><b>We present eight face images from different sources, along with the heatmap visualizations of MIDS's F<sub>vl</sub> and F<sub>vg</sub>, and several key information from FFAA's answers. It can be observed that F<sub>vl</sub> tends to focus on specific facial features, the surrounding environment, and more apparent local forgery marks or authenticity clues, whereas F<sub>vg</sub> emphasizes more abstract features (<i>e.g.</i>, <i>'smoothness'</i>, <i>'lighting'</i>, <i>'shadows'</i>, <i>'integration'</i>).</b>
               
     </div>
   </div>
@@ -513,14 +528,14 @@
         "description": "dfd_fake",
         "turns": [
           // ["Description", "Please read the description and answer the question."],
-          ["User", "(Ground Truth: Fake; Source: DeepFakeDetection_c23)", "static/images/fake_c23_dfd5.png"],
+          ["User", "", "static/images/fake_c23_dfd5.png"],
           ["User", "In this photograph, a human face is shown. Is it natural or manipulated? What leads you to this judgement?​"],
           ["FFAA", 
             "Image description: The image shows a close-up of a human face with long dark hair. The lighting appears to be even, and the resolution is moderate. The face is oriented slightly to the left. The individual appears to be an adult female with light to medium skin tone. The expression is neutral, with slightly parted lips. There are no visible face decorations.\n" + 
             "Forgery reasoning: Upon close examination, there are several abnormalities in the facial features. The area around the mouth appears unnatural and slightly blurred, suggesting possible manipulation. The skin texture around the mouth does not match the rest of the face, indicating inconsistency. Additionally, the lips seem to lack natural definition and shadowing, which is often a sign of digital alteration. The eyes and other facial features appear normal, but the overall integration of the face with the surrounding hair and background seems slightly off, suggesting that the face might have been altered or replaced.\n" + 
             "Analysis result: fake, Forgery type: Identity exchange\n" +
             "Match score: 0.7812; Difficulty: hard\n" + 
-            "(The heatmap reveals visual authenticity clues in the face image corresponding to the 'Analysis result'.)",
+            "(Ground Truth: Fake; Source: DeepFakeDetection_c23)",
             "static/images/fake_c23_dfd5_result.png"
           ]
         ]
@@ -528,15 +543,75 @@
       {
         "description": "dfd_real_c40",
         "turns": [
-          ["User", "(Ground Truth: Real; Source: DeepFakeDetection_c40)", "static/images/real_c40_dfd1.png"],
+          ["User", "", "static/images/real_c40_dfd1.png"],
           ["User", "We see a human face in this image. Is it an actual photo or a fabrication? What leads you to that conclusion?​"],
           ["FFAA", 
             "Image description: The image shows a close-up of a male face with medium to dark skin tone. The lighting appears to be even, and the resolution is relatively low, resulting in some pixelation. The face is oriented slightly to the left, with visible facial features including eyes, eyebrows, nose, and mouth. The expression appears to be neutral or slightly serious. There are no visible face decorations.\n" + 
             "Forgery reasoning: The facial features, such as the eyes, eyebrows, nose, and mouth, appear to be naturally integrated with the rest of the face. There are no visible abnormalities or inconsistencies in the facial organs. The skin texture, despite the low resolution, does not show signs of being overly smooth or blurred, which are common indicators of face synthesis. There are no noticeable fusion artifacts or inconsistent skin colors at the boundaries of the face. The hair and surrounding environment also appear to be naturally integrated with the face. There are no signs of facial attribute manipulation such as unnatural changes in expression, color, or texture.\n" + 
             "Analysis result: real, Forgery type: None\n" +
-            "Match score: 0.9710; Difficulty: hard\n" +
-            "(The heatmap reveals visual authenticity clues in the face image corresponding to the 'Analysis result'.)",
+            "Match score: 0.9710; Difficulty: hard\n" + 
+            "(Ground Truth: Real; Source: DeepFakeDetection_c40)",
             "static/images/real_c40_dfd1_result.png"
+          ]
+        ]
+      },
+      {
+        "description": "fake_pggan4",
+        "turns": [
+          ["User", "", "static/images/fake_pggan4.png"],
+          ["User", "The image is a human face image. Is it real or fake? Why?​"],
+          ["FFAA", 
+            "Image description: The image shows a close-up of a young woman with blonde hair, light skin, and brown eyes. The lighting is even, and the resolution is high. The face is oriented directly towards the camera, with a neutral expression and a slight smile. There are no visible face decorations, and the background is blurred.\n" + 
+            "Forgery reasoning: Upon close inspection, there are several indicators that suggest this face might be synthesized. The skin texture appears overly smooth and lacks the natural imperfections typically found in real human skin. The transition between the hairline and the forehead is unnaturally seamless, which is often a sign of image synthesis. Additionally, the symmetry of the facial features is unusually perfect, which is uncommon in natural human faces. The eyes, nose, and mouth are all well-defined, but there is a slight unnaturalness in their alignment and proportions. These subtle inconsistencies collectively point towards the possibility of the face being entirely synthesized.\n" + 
+            "Analysis result: fake, Forgery type: Entire face synthesis\n" +
+            "Match score: 0.9995; Difficulty: hard\n" + 
+            "(Ground Truth: Fake; Source: StyleGAN)",
+            "static/images/fake_pggan4_result.png"
+          ]
+        ]
+      },
+      {
+        "description": "fake_dpf5",
+        "turns": [
+          ["User", "", "static/images/fake_dpf5.png"],
+          ["User", "This picture shows a human face. Do you think it's genuine or counterfeit? What are your reasons?​"],
+          ["FFAA", 
+            "Image description: The image shows a young woman with light skin, brown hair, and brown eyes. Her face is oriented towards the camera, and she appears to be in a well-lit environment. She has a neutral expression with slightly parted lips, and there are no visible face decorations. The resolution of the image is relatively high, and the lighting is even across her face.\n" + 
+            "Forgery reasoning: Upon close examination, there are several indicators that suggest facial attribute manipulation. The skin texture appears overly smooth and lacks the natural imperfections typically found on real human skin. The area around the eyes and mouth shows signs of unnatural blending, with inconsistent skin tones and slight blurring. The eyebrows and lips also appear slightly unnatural in their texture and color, suggesting they may have been digitally altered. Additionally, the integration of the face with the surrounding hair and background seems slightly off, with minor artifacts visible around the edges of the face.\n" + 
+            "Analysis result: fake, Forgery type: Facial attribute manipulation\n" +
+            "Match score: 0.8965; Difficulty: hard\n" + 
+            "(Ground Truth: Fake; Source: Deeperforensics)",
+            "static/images/fake_dpf5_result.png"
+          ]
+        ]
+      },
+      {
+        "description": "fake_dfdc6",
+        "turns": [
+          ["User", "", "static/images/fake_dfdc6.png"],
+          ["User", "We see a human face in this image. Is it an actual photo or a fabrication? What leads you to that conclusion?​"],
+          ["FFAA", 
+            "Image description: The image shows a human face with long brown hair. The lighting appears to be even, and the resolution is moderate. The face is oriented towards the camera, with a neutral expression. The skin tone is light, and there are no visible face decorations. The facial features include a nose, eyes, and mouth.\n" + 
+            "Forgery reasoning: Upon close examination, there are several abnormalities in the facial features. The eyes appear to be unnaturally smooth and lack the typical texture and detail seen in real eyes. The area around the mouth and nose also shows signs of blurring and pixelation, which are common indicators of face forgery. The skin tone appears inconsistent, especially around the edges of the face, suggesting possible fusion artifacts. Additionally, the integration of the face with the hair and surrounding environment seems unnatural, indicating potential manipulation. These inconsistencies suggest that the face has been altered or replaced.\n" + 
+            "Analysis result: fake, Forgery type: Identity exchange\n" +
+            "Match score: 0.9999; Difficulty: easy\n" + 
+            "(Ground Truth: Fake; Source: DFDC)",
+            "static/images/fake_dfdc6_result.png"
+          ]
+        ]
+      },
+      {
+        "description": "real_celeba3",
+        "turns": [
+          ["User", "", "static/images/real_celeba3.jpg"],
+          ["User", "The image features a human face. Is it authentic or fabricated? What evidence do you have?"],
+          ["FFAA", 
+            "Image description: The image shows a young female with light skin, brown hair, and brown eyes. She is wearing a hat and has braided hair. She is holding a straw to her lips. The lighting is even, and the resolution is clear. Her facial expression is neutral, and there are no visible face decorations other than the hat.\n" + 
+            "Forgery reasoning: The facial features appear natural and well-integrated with the surrounding elements such as the hat and hair. There are no visible abnormalities in the facial organs, such as blurring, pixelation, or uncoordinated features. The skin texture and color are consistent throughout the face. There are no fusion artifacts or inconsistent skin tones at the boundaries of the face. The facial attributes, including the eyes, nose, and mouth, appear natural and consistent with the rest of the face. The integration of the face with the hair, hat, and background is seamless, with no signs of manipulation.\n" + 
+            "Analysis result: real, Forgery type: None\n" +
+            "Match score: 0.9942; Difficulty: hard\n" +
+            "(Ground Truth: Real; Source: Celeb-A)",
+            "static/images/real_celeba3_result.png"
           ]
         ]
       },
